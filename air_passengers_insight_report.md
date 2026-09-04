@@ -1,7 +1,3 @@
-# M1-1
-AI 데이터 분석: 데이터 기반 트렌드 분석
-
-cat << 'EOF' > /workspaces/M1-1/air_passengers_insight_report.md
 # 📊 [리포트] Air Passengers 시계열 데이터 기반 수요 분석 및 AI 예측 인사이트
 
 ## 1. 개요 및 분석 목적
@@ -45,17 +41,6 @@ cat << 'EOF' > /workspaces/M1-1/air_passengers_insight_report.md
   * `Resid` 요소를 통해 특정 외부 충격이나 불규칙 변동을 독립적으로 검증 가능.
 * **인사이트**: 시계열 분석 시 계절성 요인을 분리해내는 정량적 모델링이 필수적임을 시사.
 
------
-
-### 3.1 [그림 1] 승객 수 추세 및 12개월 이동평균
-![승객 수 추세](passenger_trend.png)
-
-### 3.2 [그림 2] 월별 분포 박스플롯
-![월별 분포 박스플롯](monthly_boxplot.png)
-
-### 3.3 [그림 3] 시계열 요인 분해
-![시계열 요인 분해](ts_decomposition.png)
-
 ---
 
 ## 4. 데이터 기반 의사결정 및 AI 활용 분석 역량 제안
@@ -70,4 +55,3 @@ cat << 'EOF' > /workspaces/M1-1/air_passengers_insight_report.md
    * 승수적 변동성을 완화하기 위한 **로그 변환(Log Transformation)** 전처리 수행.
 2. **AI 예측 기반 자동화**:
    * 미래 12개월~24개월 승객 수 예측 수치를 자동 산출하여 항공권 예약 시스템 및 공항 지상 조업 인력 배치 자동화 연동.
-EOF
