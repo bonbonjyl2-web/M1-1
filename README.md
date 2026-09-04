@@ -1,6 +1,5 @@
 cat << 'EOF' > /workspaces/M1-1/air_passengers_insight_report.md
-# 📊 [리포트] Air Passengers 시계열 데이터 기반 수요 분석 및 
-               AI 예측 인사이트
+# 📊 Air Passengers 시계열 데이터 기반 수요 분석 및 AI 예측 인사이트
 
 ## 1. 개요 및 프로젝트 핵심 질문 정의
 
