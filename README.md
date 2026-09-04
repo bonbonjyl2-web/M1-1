@@ -2,6 +2,51 @@
 AI 데이터 분석: 데이터 기반 트렌드 분석
 
 
+<<<<<<< HEAD
+=======
+# ✈️ Air Passengers Time Series Analysis Project
+
+본 프로젝트는 1949년부터 1960년까지의 국제 항공 승객 수 데이터셋을 활용하여 장기 추세, 계절성, 변화율을 정량 분석하고 AI 기반 수요 예측 모델 도입을 제안하는 시계열 프로젝트입니다.
+
+---
+
+## 🔗 Repository Information
+* **GitHub Repository URL**: `https://github.com/bonbonjyl2-web/M1-1
+* **Main Script**: `time_series.p
+* **Report File**: `air_passengers_insight_report.md`
+* **Dataset Source**: Kaggle Classic Dataset (Box & Jenkins, 1976)
+
+---
+
+## 🛠️ 실행 환경 및 명령어 (Execution Details)
+
+### 1. 파이썬 버전 및 필수 패키지
+* **Python Version**: `3.12.1`
+* **Key Packages**:
+  * `pandas == 2.2.0`
+  * `numpy == 1.26.3`
+  * `matplotlib == 3.8.2`
+  * `seaborn == 0.13.2`
+  * `statsmodels == 0.14.1`
+
+### 2. 실행 절차
+```bash
+# 1. 저장소 클론 및 이동
+git clone [https://github.com/bonbonjyl2-web/M1-1.git](https://github.com/bonbonjyl2-web/M1-1.git)
+cd 저장소이름 M1-1
+
+# 2. 의존성 패키지 설치
+pip install -r requirements.txt
+
+# 3. 데이터 분석 및 시각화 스크립트 실행
+python time_series.py
+
+
+### 3. `air_passengers_insight_report.md` 보완 업데이트
+
+터미널에서 아래 명령어를 실행하여 **평가항목 #8 ~ #17**이 완벽히 정량화된 최종 마크다운 리포트로 교체해 주세요.
+
+
 # 📊 [리포트] Air Passengers 시계열 데이터 기반 수요 분석 및 AI 예측 인사이트
 
 ## 1. 개요 및 프로젝트 핵심 질문 정의
