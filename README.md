@@ -1,8 +1,6 @@
 # M1-1
 AI 데이터 분석: 데이터 기반 트렌드 분석
 
-
-<<<<<<< HEAD
 =======
 # ✈️ Air Passengers Time Series Analysis Project
 
@@ -30,7 +28,7 @@ AI 데이터 분석: 데이터 기반 트렌드 분석
   * `statsmodels == 0.14.1`
 
 ### 2. 실행 절차
-```bash
+
 # 1. 저장소 클론 및 이동
 git clone [https://github.com/bonbonjyl2-web/M1-1.git](https://github.com/bonbonjyl2-web/M1-1.git)
 cd 저장소이름 M1-1
@@ -42,9 +40,7 @@ pip install -r requirements.txt
 python time_series.py
 
 
-### 3. `air_passengers_insight_report.md` 보완 업데이트
-
-터미널에서 아래 명령어를 실행하여 **평가항목 #8 ~ #17**이 완벽히 정량화된 최종 마크다운 리포트로 교체해 주세요.
+### 3. `air_passengers_insight_report.md` 
 
 
 # 📊 [리포트] Air Passengers 시계열 데이터 기반 수요 분석 및 AI 예측 인사이트
@@ -65,7 +61,7 @@ python time_series.py
 
 ## 2. 데이터 처리 파라미터 및 정제 통계 요약
 
-### 2.1 단계별 입출력 및 파라미터 명세 [평가항목 #8]
+### 2.1 단계별 입출력 및 파라미터 명세 
 
 | 처리 단계 | 입력 파일 / 형식 | 적용 세부 파라미터 | 출력 파일 / 형식 | 주요 목적 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -73,7 +69,7 @@ python time_series.py
 | **2. 파생변수 생성** | Cleaned Data | - `rolling(window=12).mean()`<br>- `pct_change() * 100` | `AirPassengers_cleaned.csv` | 장기 추세 및 MoM 변화율 산출 |
 | **3. 시계열 요인 분해** | `Passengers` Time Series | - `seasonal_decompose(model='multiplicative', period=12)` | `ts_decomposition.png` | Trend, Seasonal, Resid 성분 분리 |
 
-### 2.2 결측치 및 이상치 정제 전후 영향 수치 [평가항목 #9]
+### 2.2 결측치 및 이상치 정제 전후 영향 수치 
 
 * **결측치 (Missing Values)**: 
   * **전/후 수치**: 정제 전 **0건 (0.0%)** $\rightarrow$ 정제 후 **0건 (0.0%)** (원본 데이터 무결성 확인)
@@ -84,7 +80,7 @@ python time_series.py
 
 ---
 
-## 3. 시계열 분해 및 요소별 정량적 분산 기여율 [평가항목 #12]
+## 3. 시계열 분해 및 요소별 정량적 분산 기여율 
 
 시계열 변동성을 수학적으로 검증하기 위해 로그 변환 후 각 성분의 분산 기여율(Variance Share)을 산출함.
 
@@ -98,7 +94,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 
 ---
 
-## 4. 인사이트 프레임워크 (F-W-A 및 예상 효과) [평가항목 #14]
+## 4. 인사이트 프레임워크 (F-W-A 및 예상 효과) 
 
 | 주요 인사이트 | 관찰 (Finding) | 원인 (Why) | 권장 행동 (Action) | 예상 정량적 효과 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -108,7 +104,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 
 ---
 
-## 5. 시계열 모델 검증 절차 및 Rolling Window CV 결과 요약 [평가항목 #13]
+## 5. 시계열 모델 검증 절차 및 Rolling Window CV 결과 요약 
 
 ### 5.1 검증 방법론
 * **데이터 분할**: Train(1949\~1958, 120개월) / Test(1959\~1960, 24개월)
@@ -124,7 +120,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 
 ---
 
-## 6. 분석 반례 및 집계 단위 시각적 비교 [평가항목 #15]
+## 6. 분석 반례 및 집계 단위 시각적 비교 
 
 ### 6.1 월별 vs 분기별 집계 단위 수치 비교표
 
@@ -137,7 +133,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 
 ---
 
-## 7. 분석 한계 및 추가 데이터 수집 제안 (경로/주기) [평가항목 #16]
+## 7. 분석 한계 및 추가 데이터 수집 제안 (경로/주기) 
 
 | 우선순위 | 수집 데이터 항목 | 예상 수집 경로 / API | 수집 주기 | 활용 목적 |
 | :---: | :--- | :--- | :---: | :--- |
@@ -147,7 +143,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 
 ---
 
-## 8. AI 생성 로그 원문 vs 최종 작성 결론 비교표 [평가항목 #17]
+## 8. AI 생성 로그 원문 vs 최종 작성 결론 비교표 
 
 | 항목 | AI 원본 응답 내용 (AI Raw Output Log) | 분석가 최종 재작성 결론 (Re-synthesized) | 비판적 재구성 사유 |
 | :--- | :--- | :--- | :--- |
