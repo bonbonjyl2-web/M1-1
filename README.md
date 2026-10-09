@@ -100,6 +100,7 @@ $$\text{Variance Share} = \frac{\text{Var}(\text{Component})}{\text{Var}(\text{T
 *   **시각적 최적화**: 승법 모델의 잔차는 1.0을 중심으로 분포함. 기존 스케일에서는 변동이 미미해 보였으나, **y축을 0.95~1.05로 확대**하여 분석한 결과 잔차가 특정 패턴 없이 무작위하게 분포함을 확인(White Noise에 근접).
 *   **해석**: 잔차가 1.0 기준 ±5% 이내에서 안정적으로 관리되고 있어, 본 시계열 분해 모델이 과거 데이터를 매우 정교하게 학습했음을 시사함.
 
+![Time Series Decomposition](./ts_decomposition.png)
 ---
 
 ## 4. 인사이트 프레임워크 (F-W-A 및 예상 효과) 
