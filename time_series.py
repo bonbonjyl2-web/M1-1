@@ -120,3 +120,44 @@ plt.close()
 
 df.to_csv("AirPassengers_cleaned.csv", index=False)
 print("\n[완료] 데이터 정제 및 시각화 저장 성공 (AirPassengers_cleaned.csv 생성됨)")
+
+# ==========================================
+# 5. 분석 리포트 및 인사이트 (평가항목 대응)
+# ==========================================
+
+print("\n" + "=" * 60)
+print("[분석 결과 해석 - Observation & Interpretation]")
+print("=" * 60)
+
+# 관찰(Observation)
+print("1. 관찰 (Observation):")
+print(f"   - 전체적인 추세는 1949년부터 1960년까지 지속적으로 우상향함.")
+print(f"   - 계절성 분산 기여율({(var_seasonal/var_total)*100:.2f}%)이 잔차({(var_resid/var_total)*100:.2f}%)보다 압도적으로 높음.")
+print(f"   - 박스플롯 상 7, 8월의 승객 수가 연중 가장 높게 나타남.")
+
+# 해석(Interpretation)
+print("\n2. 해석 및 가설 (Interpretation):")
+print("   - (가설 1) 항공 산업의 성장기: 전후 경제 성장과 항공 기술 발달로 인해 장기적 수요가 증가함.")
+print("   - (가설 2) 하계 휴가 영향: 7-8월의 피크는 전형적인 여름 휴가 시즌의 영향으로 판단됨.")
+print("   - (가설 3) 모델 적합성: 잔차 비중이 매우 낮으므로, 이 데이터는 추세와 계절성만으로도 높은 예측력을 가질 것임.")
+
+# ==========================================
+# 6. AI 사용 투명성 로그 (필수 항목)
+# ==========================================
+print("\n" + "=" * 60)
+print("[AI 사용 투명성 로그]")
+print("=" * 60)
+ai_log = """
+1. 사용 작업: 시계열 분산 기여율 계산 로직 구현 및 시각화 코드 최적화.
+2. 사용 이유: 복잡한 통계적 수치 계산의 정확도를 높이고 시각화 라이브러리(Seaborn)의 최신 문법 적용을 위함.
+3. 검증 방법: statsmodels의 분해 결과값과 수동 계산값을 비교 검증하고, 생성된 PNG 파일의 라벨 일치 여부 확인.
+"""
+print(ai_log.strip())
+print("=" * 60)
+
+# 리포트 텍스트 파일 저장
+with open("analysis_report.txt", "w", encoding="utf-8") as f:
+    f.write("[AirPassengers Analysis Report]\n")
+    f.write(f"Trend Share: {(var_trend/var_total)*100:.2f}%\n")
+    f.write(f"Seasonal Share: {(var_seasonal/var_total)*100:.2f}%\n")
+    f.write(ai_log)
