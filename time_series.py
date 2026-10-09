@@ -112,8 +112,12 @@ plt.close()
 
 # [그래프 3]
 fig = result.plot()
-fig.set_size_inches(12, 8)
+fig.set_size_inches(12, 10)
 fig.suptitle("3. Time Series Decomposition (Trend / Seasonality / Residual)", fontsize=13, y=1.01)
+# fig.axes[3]은 4번째 그래프인 Resid(잔차)를 의미합니다.
+fig.axes[3].set_ylim(0.95, 1.05) 
+fig.axes[3].axhline(1, color='red', linestyle='--', alpha=0.5) # 기준선(1.0) 추가
+# ----------------------------
 plt.tight_layout()
 plt.savefig("ts_decomposition.png")
 plt.close()
