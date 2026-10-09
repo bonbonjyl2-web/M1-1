@@ -110,18 +110,24 @@ plt.tight_layout()
 plt.savefig("monthly_boxplot.png")
 plt.close()
 
-# [그래프 3]
+# [그래프 3] 시계열 분해 시각화 수정 버전
 fig = result.plot()
 fig.set_size_inches(12, 10)
-fig.suptitle("3. Time Series Decomposition (Trend / Seasonality / Residual)", fontsize=13, y=1.01)
-# fig.axes[3]은 4번째 그래프인 Resid(잔차)를 의미합니다.
-fig.axes[3].set_ylim(0.95, 1.05) 
-fig.axes[3].axhline(1, color='red', linestyle='--', alpha=0.5) # 기준선(1.0) 추가
-# ----------------------------
-plt.tight_layout()
+
+# 1. 제목의 높이(y)를 살짝 낮추고 (기존 1.01 -> 0.98)
+fig.suptitle("3. Time Series Decomposition (Trend / Seasonality / Residual)", 
+             fontsize=13, y=0.98)
+
+# 2. 잔차 축 범위 조정
+fig.axes[3].set_ylim(0.95, 1.05)
+fig.axes[3].axhline(1, color='red', linestyle='--', alpha=0.5)
+
+# 3. tight_layout 실행 시 상단에 여백(rect)을 강제로 부여 (핵심!)
+# rect=[왼쪽, 아래, 오른쪽, 위] 순서입니다. 상단(0.95)에 여백을 줍니다.
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+
 plt.savefig("ts_decomposition.png")
 plt.close()
-
 df.to_csv("AirPassengers_cleaned.csv", index=False)
 print("\n[완료] 데이터 정제 및 시각화 저장 성공 (AirPassengers_cleaned.csv 생성됨)")
 
