@@ -11,7 +11,7 @@ AI 데이터 분석: 데이터 기반 트렌드 분석
 ## 🔗 Repository Information
 * **GitHub Repository URL**: `https://github.com/bonbonjyl2-web/M1-1
 * **Main Script**: `time_series.p
-* **Report File**: `air_passengers_insight_report.md`
+* **Report File**: `README.md`
 * **Dataset Source**: Kaggle Classic Dataset (Box & Jenkins, 1976)
 
 ---
