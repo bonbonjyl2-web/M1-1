@@ -38,10 +38,7 @@ pip install -r requirements.txt
 
 # 3. 데이터 분석 및 시각화 스크립트 실행
 python time_series.py
-
-
-### 3. `air_passengers_insight_report.md` 
-
+--------
 
 # 📊 [리포트] Air Passengers 시계열 데이터 기반 수요 분석 및 AI 예측 인사이트
 

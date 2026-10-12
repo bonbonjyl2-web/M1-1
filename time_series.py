@@ -113,27 +113,27 @@ plt.close()
 # [그래프 3] 시계열 분해 시각화 최종 수정 버전
 fig = result.plot()
 # 1. 그림 전체 세로 크기를 넉넉하게 키웁니다 (14인치)
-fig.set_size_inches(12, 14)
+fig.set_size_inches(12, 15)
 
-# 2. 전체 제목을 맨 위에 여유 있게 배치합니다 (y=0.97)
+# 2. 전체 제목을 캔버스 안쪽에 배치합니다.
 fig.suptitle("3. Time Series Decomposition (Trend / Seasonality / Residual)", 
-             fontsize=13, y=0.97, fontweight='bold')
+             fontsize=13, y=0.98, fontweight='bold')
 
 # 3. 각 서브플롯(Axes)들의 타이틀이 겹치지 않게 위쪽으로 살짝 밀어줍니다
 for ax in fig.axes:
     title = ax.get_title()
     if title:
         # 서브플롯 내부 타이틀 위치 조정
-        ax.set_title(title, y=0.05, fontsize=10)
+        ax.set_title(title, y=1.02, fontsize=10)
 
 # 4. 잔차(Residual) 축 범위 및 기준선 설정
 fig.axes[3].set_ylim(0.95, 1.05)
 fig.axes[3].axhline(1, color='red', linestyle='--', alpha=0.5)
 
-# 5. 상단 여백을 대폭 확보합니다 (rect의 네 번째 값을 0.88로 설정)
-plt.tight_layout(rect=[0, 0.02, 1, 0.80])
+# 5. 전체 제목을 위한 상단 여백을 확보합니다.
+fig.tight_layout(rect=[0, 0.02, 1, 0.92])
 
-plt.savefig("ts_decomposition.png")
+plt.savefig("ts_decomposition.png", dpi=300)
 plt.close()
 df.to_csv("AirPassengers_cleaned.csv", index=False)
 print("\n[완료] 데이터 정제 및 시각화 저장 성공 (AirPassengers_cleaned.csv 생성됨)")
